@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const Navbar = () => {
   return (
@@ -7,8 +7,7 @@ const Navbar = () => {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '16px 32px',
-        background: '#fff',
+        padding: '0px 32px 16px 32px',
         borderBottom: '1px solid #eee',
         fontWeight: 500,
       }}

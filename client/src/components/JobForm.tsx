@@ -63,8 +63,8 @@ const JobForm = () => {
           required
         />
       </div>
-      <div>
-        <label htmlFor="">Upload Resume</label>
+      <div style={{ marginBottom: "12px" }}>
+        <label htmlFor="">Upload Resume (.pdf, .doc, .docx)</label>
         <input
           type="file"
           accept=".pdf,.doc,.docx"
@@ -75,59 +75,29 @@ const JobForm = () => {
       <div>
         <label>Cover Letter Style:</label>
         <div style={{ display: "flex", gap: "12px", margin: "8px 0" }}>
-          <label>
-            <input
-              type="radio"
-              name="style"
-              value="formal"
-              checked={style === "formal"}
-              onChange={() => setStyle("formal")}
-            />
-            Formal
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="style"
-              value="confident"
-              checked={style === "confident"}
-              onChange={() => setStyle("confident")}
-            />
-            Confident
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="style"
-              value="friendly"
-              checked={style === "friendly"}
-              onChange={() => setStyle("friendly")}
-            />
-            Friendly
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="style"
-              value="creative"
-              checked={style === "creative"}
-              onChange={() => setStyle("creative")}
-            />
-            Creative
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="style"
-              value="passionate"
-              checked={style === "passionate"}
-              onChange={() => setStyle("passionate")}
-            />
-            Passionate
-          </label>
+          <select
+            id="style"
+            value={style}
+            onChange={(e) => setStyle(e.target.value)}
+            required
+            style={{
+              marginTop: "8px",
+              padding: "10px",
+              borderRadius: "4px",
+              width: "110px",
+            }}
+          >
+            <option value="formal">Formal</option>
+            <option value="confident">Confident</option>
+            <option value="friendly">Friendly</option>
+            <option value="creative">Creative</option>
+            <option value="passionate">Passionate</option>
+          </select>
         </div>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" style={{ marginTop: "8px" }}>
+        Generate Cover Letter
+      </button>
     </form>
   );
 };
