@@ -24,6 +24,7 @@ const JobForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h2 style={{textAlign:"left", marginTop:"-10px"}}>Job Info</h2>
       <div>
         <label htmlFor="jobTitle">Job Title:</label>
         <input
